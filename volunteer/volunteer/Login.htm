@@ -1,0 +1,552 @@
+ 
+<html lang="zh-CN" dir="ltr">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=GB2312">
+<style type=text/css> 
+<!--
+body,td,div,p,a,font,span {font-family: arial,sans-serif}
+body {margin-top:2}
+ 
+.c {width: 4; height: 0}
+ 
+.bubble {background-color:#C3D9FF}
+ 
+.tl {padding: 0; width: 4; text-align: left; vertical-align: top}
+.tr {padding: 0; width: 4; text-align: right; vertical-align: top}
+.bl {padding: 0; width: 4; text-align: left; vertical-align: bottom}
+.br {padding: 0; width: 4; text-align: right; vertical-align: bottom}
+ 
+.caption {color:#000000; white-space:nowrap; background:#E8EEFA; text-align:center}
+ 
+.form-noindent {background-color: #ffffff; border: #C3D9FF 1px solid}
+ 
+.feature-image {padding: 15 0 0 0; vertical-align: top; text-align: right; }
+.feature-description {padding: 15 0 0 10; vertical-align: top; text-align: left; }
+ 
+.signup_btn {cursor: pointer; margin: 10px 0 -20px 0; text-align: center; }
+.signup_btn_link {color: #000; text-align: center; text-align: center; text-decoration: none; padding: 0 7px; font-weight: bold; font-size: 14px; white-space: nowrap; }
+ 
+.SPRITE_signup_button_grey_l { background:no-repeat url(https://mail.google.com/mail/help/images/greybtn.png) 0 0; width: 14px; height: 45px }
+.SPRITE_signup_button_grey_m { background:no-repeat url(https://mail.google.com/mail/help/images/greybtn.png) -14px 0; height: 45px }
+.SPRITE_signup_button_grey_r { background:no-repeat url(https://mail.google.com/mail/help/images/greybtn.png) -365px 0; width: 15px; height: 45px }
+ 
+ 
+.SPRITE_cell {background: no-repeat url(https://mail.google.com/mail/help/images/login_features_sprite.png) 0 -142px; width: 42px; height: 42px; float: right }
+.SPRITE_search_new {background:no-repeat url(https://mail.google.com/mail/help/images/login_features_sprite.png) 0 -100px; width: 42px; height: 42px; float: right }
+.SPRITE_spam_new {background:no-repeat url(https://mail.google.com/mail/help/images/login_features_sprite.png) 0 -58px; width: 42px; height: 42px; float: right }
+.SPRITE_storage {background:no-repeat url(https://mail.google.com/mail/help/images/login_features_sprite.png) 0 0; width: 42px; height: 42px; float: right }
+.SPRITE_feed_icon {background: no-repeat url(https://mail.google.com/mail/help/images/login_features_sprite.png) 0 -42px; width: 16px; height: 16px }
+ 
+.SPRITE_corner_bl {background:no-repeat url(https://mail.google.com/mail/help/images/login_corners_sprite.png) 0 0; width: 4px; height: 4px; font-size:2px }
+.SPRITE_corner_br {background:no-repeat url(https://mail.google.com/mail/help/images/login_corners_sprite.png) -4px 0; width: 4px; height: 4px; font-size:2px }
+.SPRITE_corner_tl {background:no-repeat url(https://mail.google.com/mail/help/images/login_corners_sprite.png) 0 -4px; width: 4px; height: 4px; font-size:2x }
+.SPRITE_corner_tr {background:no-repeat url(https://mail.google.com/mail/help/images/login_corners_sprite.png) -4px -4px; width: 4px; height: 4px; font-size:2px }
+ 
+ 
+// -->
+</style>
+<title>
+  青年志愿者服务时间管理系统
+</title>
+</head>
+<body  bgcolor=#ffffff link=#0000FF vlink=#0000FF onload="OnLoad(); " style="text-align: center">
+<table width=95% border=0 align=center cellpadding=0 cellspacing=0>
+  <tr valign=top>
+  <td width=1%>
+  <img border="0" src="image/Logo.gif" width="69" height="61">
+  </td>
+  <td width=99% bgcolor=#ffffff valign=top>
+  <table width=100% cellpadding=1>
+  <tr valign=bottom>
+  <td><div align=right>　</div></td>
+  </tr>
+  <tr>
+  <td nowrap=nowrap>
+  <table width=100% align=center cellpadding=0 cellspacing=0 bgcolor=#C3D9FF style=margin-bottom:5>
+  <tr>
+  <td class="bubble tl" align=left valign=top><div class="SPRITE_corner_tl" /></td>
+  <td class=bubble rowspan=2 style="font-family:arial;text-align:left;font-weight:bold;padding:5 0"><b>欢迎使用</b>青年志愿者服务时间管理系统</td>
+  <td class="bubble tr" align=right valign=top><div class="SPRITE_corner_tr" /></td>
+  </tr>
+  <tr>
+  <td class="bubble bl" align=left valign=bottom><div class="SPRITE_corner_bl" /></td>
+  <td class="bubble br" align=right valign=bottom><div class="SPRITE_corner_br" /></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+</table>
+<table width=94% align=center cellpadding=5 cellspacing=1>
+  <tr>
+  <td valign=top style="text-align:left"><b>四川大学青年志愿者服务时间管理系统</b><td valign=top>&nbsp;
+  </tr>
+  <tr>
+  <td width=75% valign=top>
+  <p style="margin-bottom: 0;text-align:left"><font size=-1>
+  青年志愿者时间银行系统的开发理念是，志愿者可以更加直观、高效而便捷，甚至可能很有趣。该系统具有以下特点：
+</p>
+<table border="0" cellpadding="0" cellspacing="0" width="90%"><tbody>
+  <tr>
+  <td class="feature-image">
+	<p style="text-align: center">
+	<img border="0" src="image/1.png" width="47" height="50"></td>
+  <td class="feature-description">
+  <font size=-1><b>管理注册志愿者信息</b><br>
+  利用青年志愿者服务时间管理系统的创新技术可以将注册青年志愿者的信息管理的井井有条。</font>
+  </td>
+  </tr>
+  <tr>
+  <td class="feature-image">
+	<p style="text-align: center">
+	<img border="0" src="image/2.png" width="48" height="50"></td>
+  <td class="feature-description">
+  <font size=-1><b>统计志愿时间</b><br>
+  方便志愿者分队及志愿者个人查询志愿者服务时间，从而对优秀志愿者的评定。</font></td>
+  </tr>
+  <tr>
+  <td class="feature-image">
+	<p style="text-align: center">
+	<img border="0" src="image/3.png" width="50" height="50"></td>
+  <td class="feature-description">
+  <font size=-1><b>编辑志愿活动</b><br>
+  为志愿者分队队长提供更改志愿者活动的增加、删除与修改功能。</font>
+  </td>
+  </tr>
+</tbody></table>
+  </td>
+  <td valign=top>
+  <!-- login box -->
+  <div id=login>
+<script><!--
+ 
+function gaia_onLoginSubmit() {
+ 
+  
+  if (window.gaiacb_onLoginSubmit) {
+    return gaiacb_onLoginSubmit();
+  } else {
+    return true;
+  }
+ 
+}
+ 
+ 
+function gaia_setFocus() {
+  var f = null;
+  if (document.getElementById) { 
+    f = document.getElementById("gaia_loginform");
+  } else if (window.gaia_loginform) { 
+    f = window.gaia_loginform;
+  } 
+  if (f) {
+    if (f.Email && (f.Email.value == null || f.Email.value == "")) {
+      f.Email.focus();
+    } else if (f.Passwd) {
+      f.Passwd.focus();
+    } 
+  }
+}
+--></script>
+<style type="text/css"><!--
+  div.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }
+  font.errormsg { color: red; font-size: smaller; font-family:arial,sans-serif; }  
+--></style>
+<style type="text/css"><!--
+.gaia.le.lbl { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.fpwd { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia.le.chusr { font-family: Arial, Helvetica, sans-serif; font-size: 70%; }
+.gaia.le.val { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.button { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+.gaia.le.rem { font-family: Arial, Helvetica, sans-serif; font-size: smaller; }
+ 
+.gaia.captchahtml.desc { font-family: arial, sans-serif; font-size: smaller; } 
+.gaia.captchahtml.cmt { font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
+  
+--></style>
+<form  id="gaia_loginform"
+      
+        action="loginservlet" method="post"
+      
+      onsubmit=
+                 "return(gaia_onLoginSubmit());"
+                >
+  <input type="hidden" name='rmShown' value="1" />
+<div id="gaia_loginbox">
+<table  class="form-noindent" cellspacing="3" cellpadding="5" width="100%" border="0">
+  <tr>
+  <td valign="top" style="text-align:center" nowrap="nowrap"
+        bgcolor="#e8eefa">
+  <input type="hidden" name="ltmpl"
+             value="default">
+  <input type="hidden" name="ltmplcache"
+             value="2">
+  <div class="loginBox">
+  <table id="gaia_table" align="center" border="0" cellpadding="1" cellspacing="0">
+  <tr>
+<td colspan="2" align="center">
+  <table>
+  <tr>
+  <td valign="top">
+  &nbsp;</img><font size="+0"><b>帐户</b></font>
+  </td>
+  </tr>
+</table>
+  <font size="-1">
+  登录到服务时间管理系统</font></td>
+</tr>
+  <script type="text/javascript"><!--
+    function onPreCreateAccount() {
+    
+      return true;
+    
+    }
+ 
+    function onPreLogin() {
+    
+      
+      if (window["onlogin"] != null) {
+        return onlogin();
+      } else {
+        return true;
+      }
+    
+    }
+  --></script>
+<tr>
+  <td colspan="2" align="center">
+  </td>
+</tr>
+<tr>
+  <td nowrap="nowrap">
+  <div align="right">
+  <span class="gaia le lbl">
+  用户名:
+  </span>
+  </div>
+  </td>
+  <td>
+  <input type="hidden" name="continue" id="continue"
+           value="http://mail.google.com/mail/?ui=html&amp;zy=l" />
+  <input type="hidden" name="service" id="service"
+           value="mail" />
+  <input type="hidden" name="rm" id="rm"
+           value="false" />
+  <input type="hidden" name="dsh" id="dsh"
+           value="-8559073866029388033" />
+  <input type="hidden" name="ltmpl" id="ltmpl"
+           value="default" />
+  <input type="hidden" name="ltmpl" id="ltmpl"
+           value="default" />
+  <input type="hidden" name="scc" id="scc"
+           value="1" />
+  <input type="hidden"
+             name="GALX"
+             value="Gm8Sppve0mA" />
+  <input  type="text" name="sno"  id="Email"
+  size="18" value=""
+  
+  
+    class='gaia le val'
+  
+  />
+  </td>
+</tr>
+<tr>
+  <td></td>
+  <td align="left">
+  </td>
+</tr>
+<tr>
+  <td align="right" nowrap="nowrap">
+  <span class="gaia le lbl">
+  密码：
+  </span>
+  </td>
+  <td>
+  <input  type="password"
+   name="password" id="Passwd"
+  size="18" 
+  
+  
+ 
+  
+    class="gaia le val" 
+  
+  />
+  </td>
+</tr>
+<tr>
+  <td>
+  </td>
+  <td align="left">
+  </td>
+</tr>
+  <tr>
+  <td align="right" valign="top" colspan="2">
+  <p align="center">　</td>
+</tr>
+<tr>
+  <td colspan="2">
+  <p align="center">
+  <input type="submit" class="gaia le button" name="signIn"
+           value="登录"
+                  />
+  </td>
+</tr>
+<tr id="ga-fprow">
+  <td colspan="2" height="15" class="gaia le fpwd"
+    align="center" valign="bottom">
+  <font size="2"><a href="about.html">无法进入您的账户？</a></font></td>
+</tr>
+  </table>
+  </div>
+  </td>
+  </tr>
+</table>
+</div>
+<input type="hidden" name="asts"
+       id="asts"
+       value="">
+</form>
+<form id="gaia_universallogin"
+      action="https://www.google.com/accounts/ServiceLoginAuth?service=mail" method="post"
+      onsubmit="return(gaia_onLoginSubmit());">
+  <input type="hidden" name="continue" id="continue"
+           value="http://mail.google.com/mail/?ui=html&amp;zy=l" />
+  <input type="hidden" name="service" id="service"
+           value="mail" />
+  <input type="hidden" name="rm" id="rm"
+           value="false" />
+  <input type="hidden" name="dsh" id="dsh"
+           value="-8559073866029388033" />
+  <input type="hidden" name="ltmpl" id="ltmpl"
+           value="default" />
+  <input type="hidden" name="ltmpl" id="ltmpl"
+           value="default" />
+  <input type="hidden" name="scc" id="scc"
+           value="1" />
+  <input type="hidden" name="ltmpl" id="ltmpl"
+           value="default" />
+  <input type="hidden" name="ltmplcache" id="ltmplcache"
+           value="2" />
+</form>
+  </div>
+  <!-- end login box -->
+  <br>
+  <!-- links box (below login box) -->
+  <table class=form-noindent cellpadding=0 width=100% bgcolor=#E8EEFA id=links>
+  <tr bgcolor=#E8EEFA>
+  <td valign=top>
+  <div align=center style="margin:10 0">
+  <font size="-1">初次使用青青年志愿者服务时间管理系统? </font>
+  <p><b><font face="微软雅黑">
+	<span style="text-decoration: none"><a href="register.jsp"><font color="#000000" face="微软雅黑">
+	<span style="text-decoration: none">注册志愿者</span></font></a></span></font></b><br>
+  </div>
+  </td>
+  </tr>
+  </table>
+  <!-- end links box (below login box) -->
+</table>
+<br>
+<table width=95% align=center cellpadding=3 cellspacing=0 bgcolor=#C3D9FF style=margin-bottom:5>
+  <tr>
+  <td class="bubble tl" align=left valign=top><div class="SPRITE_corner_tl" /></td>
+  <td class=bubble rowspan=2 style=text-align:left>
+  <div align=center>
+  <font size=-1 color=#666666>&copy;2009&nbsp;&nbsp;
+	<a href="about.html">隐私政策</a> -
+  <a href="about.html">计划政策</a> -
+  <a href="about.html">使用条款 </a>
+  </font>
+  </div>
+  </td>
+  <td class="bubble tr" align=right valign=top><div class="SPRITE_corner_tr" /></td>
+  </tr>
+  <tr>
+  <td class="bubble bl" align=left valign=bottom><div class="SPRITE_corner_bl" /></td>
+  <td class="bubble br" align=right valign=bottom><div class="SPRITE_corner_br" /></td>
+  </tr>
+</table>
+  <script type="text/javascript">
+var BrowserSupport_={IsBrowserSupported:function(){var agt=navigator.userAgent.toLowerCase();var is_op=agt.indexOf("opera")!=-1;var is_ie=agt.indexOf("msie")!=-1&&document.all&&!is_op;var is_ie5=agt.indexOf("msie 5")!=-1&&document.all&&!is_op;var is_mac=agt.indexOf("mac")!=-1;var is_gk=agt.indexOf("gecko")!=-1;var is_sf=agt.indexOf("safari")!=-1;if(is_ie&&!is_op&&!is_mac){if(agt.indexOf("palmsource")!=
+-1||agt.indexOf("regking")!=-1||agt.indexOf("windows ce")!=-1||agt.indexOf("j2me")!=-1||agt.indexOf("avantgo")!=-1||agt.indexOf(" stb")!=-1)return false;var v=BrowserSupport_.GetFollowingFloat(agt,"msie ");if(v!=null)return v>=5.5}if(is_gk&&!is_sf){var v=BrowserSupport_.GetFollowingFloat(agt,"rv:");if(v!=null)return v>=1.4;else{v=BrowserSupport_.GetFollowingFloat(agt,"galeon/");if(v!=null)return v>=
+1.3}}if(is_sf){if(agt.indexOf("rv:3.14.15.92.65")!=-1)return false;var v=BrowserSupport_.GetFollowingFloat(agt,"applewebkit/");if(v!=null)return v>=312}if(is_op){if(agt.indexOf("sony/com1")!=-1)return false;var v=BrowserSupport_.GetFollowingFloat(agt,"opera ");if(v==null)v=BrowserSupport_.GetFollowingFloat(agt,"opera/");if(v!=null)return v>=8}if(agt.indexOf("pda; sony/com2")!=-1)return true;return false},
+GetFollowingFloat:function(str,pfx){var i=str.indexOf(pfx);if(i!=-1){var v=parseFloat(str.substring(i+pfx.length));if(!isNaN(v))return v}return null},tz_path:";path=/"};if(window.location.href.toLowerCase().indexOf("google.com")>0)BrowserSupport_.tz_path+=";domain=.google.com";document.cookie="TZ="+(new Date).getTimezoneOffset()+BrowserSupport_.tz_path;var is_browser_supported=BrowserSupport_.IsBrowserSupported()
+  </script>
+<script type=text/javascript> 
+<!--
+ 
+var start_time = (new Date()).getTime();
+ 
+if (top.location != self.location) {
+ top.location = self.location.href;
+}
+ 
+function SetGmailCookie(name, value) {
+  document.cookie = name + "=" + value + ";path=/;domain=.google.com";
+}
+ 
+function lg() {
+  var now = (new Date()).getTime();
+ 
+  var cookie = "T" + start_time + "/" + start_time + "/" + now;
+  SetGmailCookie("GMAIL_LOGIN", cookie);
+}
+ 
+function gaiacb_onLoginSubmit() {
+  lg();
+  if (!fixed) {
+    FixForm();
+  }
+  return true;
+}
+ 
+function StripParam(url, param) {
+  var start = url.indexOf(param);
+  if (start == -1) return url;
+  var end = start + param.length;
+ 
+  var charBefore = url.charAt(start-1);
+  if (charBefore != '?' && charBefore != '&') return url;
+ 
+  var charAfter = (url.length >= end+1) ? url.charAt(end) : '';
+  if (charAfter != '' && charAfter != '&' && charAfter != '#') return url;
+  if (charBefore == '&') {
+  --start;
+  } else if (charAfter == '&') {
+  ++end;
+  }
+  return url.substring(0, start) + url.substring(end);
+}
+var fixed = 0;
+function FixForm() {
+  if (is_browser_supported) {
+  var form = el("gaia_loginform");
+  if (form && form["continue"]) {
+  var url = form["continue"].value;
+  url = StripParam(url, "ui=html");
+  url = StripParam(url, "zy=l");
+  form["continue"].value = url;
+  }
+  }
+  fixed = 1;
+}
+function el(id) {
+  if (document.getElementById) {
+  return document.getElementById(id);
+  } else if (window[id]) {
+  return window[id];
+  }
+  return null;
+}
+// Estimates of nanite storage generation over time.
+var CP = [
+ [ 1199433600000, 6283 ],
+ [ 1224486000000, 7254 ],
+ [ 2144908800000, 10996 ],
+ [ 2147328000000, 43008 ],
+ [ 46893711600000, Number.MAX_VALUE ]
+];
+var quota_elem;
+var ONE_PX = "https://mail.google.com/mail/images/c.gif?t=" +
+  (new Date()).getTime();
+function LogRoundtripTime() {
+  var img = new Image();
+  var start = (new Date()).getTime();
+  img.onload = GetRoundtripTimeFunction(start);
+  img.src = ONE_PX;
+}
+function GetRoundtripTimeFunction(start) {
+  return function() {
+  var end = (new Date()).getTime();
+  SetGmailCookie("GMAIL_RTT", (end - start));
+  }
+}
+function MaybePingUser() {
+  var f = el("gaia_loginform");
+  if (f.Email.value) {
+  new Image().src = 'https://mail.google.com/mail?gxlu=' +
+  encodeURIComponent(f.Email.value) +
+  '&zx=' + (new Date().getTime());
+  }
+}
+function OnLoad() {
+  gaia_setFocus();
+  MaybePingUser();
+  el("gaia_loginform").Passwd.onfocus = MaybePingUser;
+  LogRoundtripTime();
+  if (!quota_elem) {
+  quota_elem = el("quota");
+  updateQuota();
+  }
+  LoadConversionScript();
+}
+function updateQuota() {
+  if (!quota_elem) {
+  return;
+  }
+  var now = (new Date()).getTime();
+  var i;
+  for (i = 0; i < CP.length; i++) {
+    if (now < CP[i][0]) {
+      break;
+    }
+  }
+  if (i == 0) {
+    setTimeout(updateQuota, 1000); 
+  } else if (i == CP.length) {
+    quota_elem.innerHTML = CP[i - 1][1];
+  } else {
+    var ts = CP[i - 1][0];
+    var bs = CP[i - 1][1];
+    quota_elem.innerHTML = format(((now-ts) / (CP[i][0]-ts) * (CP[i][1]-bs)) + bs); 
+    setTimeout(updateQuota, 1000); 
+  } 
+} 
+ 
+var PAD = '.000000'; 
+ 
+function format(num) { 
+  var str = String(num); 
+  var dot = str.indexOf('.'); 
+  if (dot < 0) { 
+     return str + PAD; 
+  } if (PAD.length > (str.length - dot)) {
+  return str + PAD.substring(str.length - dot);
+  } else {
+  return str.substring(0, dot + PAD.length);
+  }
+}
+var google_conversion_type = 'landing';
+var google_conversion_id = 1069902127;
+var google_conversion_language = "en_US";
+var google_conversion_format = "1";
+var google_conversion_color = "FFFFFF";
+function LoadConversionScript() {
+  var script = document.createElement("script");
+  script.type = "text/javascript";
+  script.src = "https://www.googleadservices.com/pagead/conversion.js";
+}
+// -->
+</script>
+<script type="text/javascript"> 
+<!--
+FixForm();
+// -->
+</script>
+<script type="text/javascript" src="https://ssl.google-analytics.com/urchin.js"></script>
+<script type="text/javascript"> 
+  _uacct="UA-992684-1";
+  _utcp="/accounts/";
+  _udn="google.com";
+  _uRno[0]=".google.com";
+  urchinTracker("/mail/gaia/homepage");
+  urchinPathCopy("/mail/help/");
+</script>
+</body>
+</html>
+

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-module
+  type="WEB"
+  name="volunteer"
+  id="myeclipse.1155994748125"
+  context-root="/volunteer"
+  j2ee-spec="1.4"
+  archive="volunteer.war">
+  <attributes>
+    <attribute name="webrootdir" value="volunteer" />
+  </attributes>
+</project-module>
+

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app version="2.4" 
+	xmlns="http://java.sun.com/xml/ns/j2ee" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xsi:schemaLocation="http://java.sun.com/xml/ns/j2ee 
+	http://java.sun.com/xml/ns/j2ee/web-app_2_4.xsd">
+  <servlet>
+    <servlet-name>queryservlet</servlet-name>
+    <servlet-class>com.web.servlet.QueryServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>queryservlet</servlet-name>
+    <url-pattern>/queryservlet</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>queryservlet2</servlet-name>
+    <servlet-class>com.web.servlet.QueryServlet2</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>queryservlet2</servlet-name>
+    <url-pattern>/queryservlet2</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>queryservlet3</servlet-name>
+    <servlet-class>com.web.servlet.QueryServlet3</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>queryservlet3</servlet-name>
+    <url-pattern>/queryservlet3</url-pattern>
+  </servlet-mapping>
+
+<servlet>
+    <servlet-name>loginservlet</servlet-name>
+    <servlet-class>com.web.servlet.LoginServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>loginservlet</servlet-name>
+    <url-pattern>/loginservlet</url-pattern>
+  </servlet-mapping>
+
+
+<servlet>
+    <servlet-name>registerservlet</servlet-name>
+    <servlet-class>com.web.servlet.RegisterServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>registerservlet</servlet-name>
+    <url-pattern>/registerservlet</url-pattern>
+  </servlet-mapping>
+
+
+
+  <servlet>
+    <servlet-name>insertservlet</servlet-name>
+    <servlet-class>com.web.servlet.InsertServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>insertservlet</servlet-name>
+    <url-pattern>/insertservlet</url-pattern>
+  </servlet-mapping>
+
+
+  <servlet>
+    <servlet-name>updatepermisservlet</servlet-name>
+    <servlet-class>com.web.servlet.UpdatePermisServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>updatepermisservlet</servlet-name>
+    <url-pattern>/updatepermisservlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>updatepaswdservlet</servlet-name>
+    <servlet-class>com.web.servlet.UpdatePaswdServlet</servlet-class>
+  </servlet>
+
+  <servlet-mapping>
+    <servlet-name>updatepaswdservlet</servlet-name>
+    <url-pattern>/updatepaswdservlet</url-pattern>
+  </servlet-mapping>
+
+</web-app>

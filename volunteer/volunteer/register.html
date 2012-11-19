@@ -1,0 +1,660 @@
+
+<%@ page contentType="text/html; charset=GB2312" %>
+<%
+String path = request.getContextPath();
+String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.getServerPort()+path+"/";
+%>
+<html>
+  <head>
+  <title>&#24535;&#24895;&#32773; &#24080;&#25143;</title>
+  <style type="text/css"><!--
+  
+  
+    body {
+      font-family: arial, sans-serif;
+      margin: 0;
+      padding: 13px 15px 15px;
+      
+    }
+    .body {
+      margin: 0;
+    }
+    div.errorbox-good {}
+
+    div.errorbox-bad {} 
+
+    div.errormsg { color: red; font-size: smaller; font-family: arial,sans-serif;}
+    font.errormsg { color: red; font-size: smaller; font-family: arial,sans-serif;}
+
+    
+    div.topbar {
+      font-size:smaller;
+      margin-right: -5px;
+      text-align:right;
+      white-space:nowrap;
+    }
+    div.header {
+      margin-bottom: 9px;
+      margin-left: -2px;
+      position:relative;
+      zoom: 1
+    }
+    div.header img.logo {
+      border: 0;
+      float:left;
+    }
+    div.header div.headercontent {
+      float:right;
+      margin-top:17px;
+    }
+    div.header:after{
+      content:".";
+      display:block;
+      height:0;
+      clear:both;
+      visibility:hidden;
+    }
+    div.pagetitle {
+      font-weight:bold;
+    }
+    
+    .footer { 
+      color: #666;
+      font-size: smaller;
+      margin-top: 40px;
+      text-align: center;
+    }
+    
+    table#signupform {
+      left: -5px;
+      top: -7px;
+      position:relative;
+    }
+    table#signupform td{
+      padding: 7px 5px;
+    }
+    table#signupform td table td{
+      padding: 1px;
+    }
+
+    
+    
+
+    
+    
+  --></style>
+</head>
+<style type="text/css"><!--
+  
+   
+  .gaia.ops.gsl { font-family: arial, sans-serif; color: #3366cc; font-weight: bold;} 
+  
+  
+  .gaia.sub.el { font-family: arial, sans-serif; font-size: smaller; font-weight: bold;}
+  .gaia.sub.pl { font-family: arial, sans-serif; font-size: smaller; font-weight: bold; }
+  .gaia.sub.rpl { font-family: arial, sans-serif; font-size: smaller; font-weight: bold; }
+  .gaia.sub.es { font-family: arial, sans-serif; font-size: smaller; font-style: italic; }
+  .gaia.sub.seex { font-family: arial, sans-serif; font-size: smaller; color: #6f6f6f; }
+  .gaia.sub.pc { font-family: arial,sans-serif; font-size: smaller; color: #6f6f6f; }
+   
+    
+   .gaia.cca.al { font-family: arial, sans-serif; font-size: smaller; font-weight: bold;}
+  .gaia.cca.ol { font-family: arial, sans-serif; font-size: x-small;}
+  .gaia.cca.cmt { font-family: arial, sans-serif; font-size: smaller; color: #6f6f6f; }
+      
+    
+   .gaia.cud.cl { font-family: arial, sans-serif; font-size: smaller; font-weight: bold;}
+   
+    
+  .gaia.captchahtml.desc { font-family: arial, sans-serif; font-size: smaller; } 
+  .gaia.captchahtml.cmt { font-family: arial, sans-serif; font-size: smaller; color: #6f6f6f; }
+
+--></style>
+  <body bgcolor="#ffffff" 
+        text="#000000" 
+        link="#0000cc" 
+        vlink="#551a8b"
+        alink="#ff0000" 
+        dir='ltr'
+        onLoad="return(doKtInit());" >
+  <!-- NewAccount.naui=default -->
+  <script type="text/javascript"><!--  
+  if (top.location != self.location) {  
+   top.location = self.location.href;
+  }
+
+  --></script>
+  <script type="text/javascript">
+  var KT_keydownHandler,KT_keypressHandler,KT_logEncoder,KT_lastElement=-1,KT_lastKeyCode=-1,KT_lastModifiers=-1,KT_logElement=0,KT_stoppedLog,KT_ALLOW_FIELD_TYPES={password:1,text:1},KT_ALLOW_FIELD_IDS={firstname:1,lastname:1,email:1,passwd:1,passwdagain:1,identityanswer:1,secondaryemail:1,newaccountcaptcha:1,nickname:1},KT_lastTime,KT_inputs,KT_keyInputs=[];if(window.captureEvents){Event.KEYPRESS&&window.captureEvents(Event.KEYPRESS);Event.KEYDOWN&&window.captureEvents(Event.KEYDOWN)}
+function KT_preSubmit(){if(KT_logEncoder){if(KT_keydownHandler){KT_encode(16);KT_initHandlers(KT_inputs)}var a=KT_logEncoder;if(a.d!=0){EN_encodeGroup(a,a.p);a.p=0}}}function KT_encode(a){a<0?KT_stopLog():EN_encode(KT_logEncoder,a)}function KT_init(a,c,d){a=KT_logElement=a;if(!a.value)a.value="A";KT_logEncoder={e:a,p:0,d:0};KT_initHandlers(d);c=c;if(!c.value)for(d=1;d<KT_keyInputs.length;d++)c.value+=KT_keyInputs[d].name+" "}
+function KT_event(a,c){if(KT_logElement.value.length>3E3){KT_encode(17);KT_stopLog()}else{var d;d=(new Date).getTime();var b=d-KT_lastTime;KT_lastTime=d;d=b;b=a.k;var e=a.t,f=a.m;if(!(a.m&3)){c|=2;if(b>=65&&b<=90)b=65;else if(b>=48&&b<=57)b=48;else if(c&1)if(b>=97&&b<=122)b=65;else if(b==197||b==229)c&=5;else if(b>=192&&b<=687)b=192;else if(b>=1536)b=1536;else if(b>=912)b=912;else if(b>=160)b=160;else if(b>=127)c&=5;else if(b>=33)b=59;else c&=5;else if(b<48)c&=5;else if(b<65)b=59;else if(b<96)c&=
+5;else if(b<112)b=96;else if(b<187)c&=5;else b=59}if(e!=KT_lastElement){KT_encode(c|4);KT_encode(e);KT_lastElement=e}else{if(b==KT_lastKeyCode&&f==KT_lastModifiers){KT_encode(c|8);KT_encode(d);return}KT_lastKeyCode=b;KT_lastModifiers=f;KT_encode(c)}KT_encode(b);KT_encode(f);KT_encode(d)}}
+function KT_initHandlers(a){KT_keydownHandler=0;KT_inputs=a;KT_stoppedLog=0;var c=1;for(a=0;a<KT_inputs.length;a++){var d=KT_inputs[a];if(!(!KT_ALLOW_FIELD_TYPES[d.type]||d.id&&!KT_ALLOW_FIELD_IDS[d.id.toLowerCase()]||d.offsetHeight==0)){d.onkeydown=KT_initKeyHandler;KT_keyInputs[c]=d;d.setAttribute("n",c++)}}}function KT_stopLog(){if(KT_keyInputs)for(var a=1;a<KT_keyInputs.length;a++){KT_keyInputs[a].onkeydown=0;KT_keyInputs[a].onkeypress=0}KT_stoppedLog=1}
+function KT_getEventModel(a){if(!a){a=window.event;if(typeof a.keyCode=="number")return 1;return 0}if(typeof a.which=="number")return 3;if(typeof a.keyCode=="number")return 2;if(typeof a.charCode=="number")return 4;return 0}
+function KT_initKeyHandler(a){var c,d=KT_logElement.value.length,b="";c=KT_getEventModel(a);switch(c){case 1:a=window.event;b+="f=window.event;var b=f.keyCode;";break;case 3:b+="var b=f.which;";break;case 2:b+="var b=f.keyCode;";break;case 4:b+="var b=f.charCode;";break}KT_keypressHandler=0;if(c!=0){if(typeof a.modifiers=="number")b+="var c=f.modifiers;";else if(typeof a.shiftKey=="boolean")b+="var c=f.shiftKey*4+f.ctrlKey*2+f.altKey;";else KT_stopLog();if(a.srcElement)b+="var d=f.srcElement;";else if(a.target)b+=
+"var d=f.target;";else KT_stopLog()}else KT_stopLog();if(!KT_stoppedLog){b+='var e=0;if(d.getAttribute("n")){e=d.getAttribute("n")}KT_event({k:b, m:c, t:e},';KT_keydownHandler=new Function("f",b+"0)");KT_keypressHandler=new Function("f",b+"1)");KT_lastTime=(new Date).getTime();KT_encode(0);KT_encode(KT_lastTime);if(d<=1){KT_encode(c);KT_encode(KT_keyInputs.length-1)}}for(c=1;c<KT_keyInputs.length;c++){d=KT_keyInputs[c];if(KT_keydownHandler){d.onkeydown=KT_keydownHandler;d.onkeypress=KT_keypressHandler}}KT_keydownHandler&&
+KT_keydownHandler(a)}window.KT_init=KT_init;window.KT_preSubmit=KT_preSubmit;this.KT_event=KT_event;var EN_EBASE=[5,4,5,5,4,5,5,4,5,4,5],EN_nBase=[],EN_vBase=[1],JSCompiler_inline_i$$4_38;EN_nBase[0]=EN_EBASE[0]-1;for(JSCompiler_inline_i$$4_38=1;JSCompiler_inline_i$$4_38<EN_EBASE.length;JSCompiler_inline_i$$4_38++){EN_nBase[JSCompiler_inline_i$$4_38]=EN_EBASE[JSCompiler_inline_i$$4_38]-1;EN_vBase[JSCompiler_inline_i$$4_38]=EN_vBase[JSCompiler_inline_i$$4_38-1]*EN_EBASE[JSCompiler_inline_i$$4_38-1]}
+function EN_encodeGroup(a,c){var d;for(d=0;d<4;d++){var b=c%67;a.e.value+="ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789 *-._".charAt(b);c=(c-b)/67}a.d=0}function EN_encode(a,c){function d(g){b+=g*EN_vBase[a.d++];if(a.d>=EN_EBASE.length){EN_encodeGroup(a,b);b=0}}for(var b=a.p,e=EN_nBase[a.d];c>0;){var f=c%e;c=(c-f)/e;d(f);e=EN_nBase[a.d]}d(e);a.p=b;return a};
+  </script>
+<script type="text/javascript"><!--
+  function doKtInit() {
+    
+      var ktlk = 'ktl';
+      var ktfk = 'ktf';
+      if (document.forms['createaccount'] &&
+          document.forms['createaccount'].elements[ktlk] &&
+          document.forms['createaccount'].elements[ktfk]) {
+        KT_init(document.forms['createaccount'].elements[ktlk],
+                document.forms['createaccount'].elements[ktfk],
+                document.forms['createaccount'].elements);
+      }
+    
+    return true;
+  }
+
+  function doKtSubmit() {
+    
+      var ktlk = 'ktl';
+      var ktfk = 'ktf';
+      if (document.forms['createaccount'] &&
+          document.forms['createaccount'].elements[ktlk] &&
+          document.forms['createaccount'].elements[ktfk]) {
+        KT_preSubmit();
+      }
+    
+    return true;
+  }
+--></script>
+  <script type="text/javascript"><!--
+    function onPreCreateAccount() {
+    
+      return true;
+    
+    }
+
+    function onPreLogin() {
+    
+      
+      if (window["onlogin"] != null) {
+        return onlogin();
+      } else {
+        return true;
+      }
+    
+    }
+  --></script>
+<table width=95% border=0 align=center cellpadding=0 cellspacing=0>
+  <tr valign=top>
+  <td width=1%>
+  <img  src="image/logo.gif" border=0 alt="Gmail" align=left vspace=10 width="70" height="57"/>
+  </td>
+  <td width=99% bgcolor=#ffffff valign=top>
+  <table width=100% cellpadding=1>
+  <tr valign=bottom>
+  <td><div align=right>¡¡</div></td>
+  </tr>
+  <tr>
+  <td nowrap=nowrap>
+  <table width=100% align=center cellpadding=0 cellspacing=0 bgcolor=#C3D9FF style=margin-bottom:5>
+  <tr>
+  <td class="bubble tl" align=left valign=top><div class="SPRITE_corner_tl" /></td>
+  <td class=bubble rowspan=2 style="font-family:arial;text-align:left;font-weight:bold;padding:5 0"><b>&#21019;&#24314; &#24535;&#24895;&#32773; &#24080;&#25143;</b></td>
+  <td class="bubble tr" align=right valign=top><div class="SPRITE_corner_tr" /></td>
+  </tr>
+  <tr>
+  <td class="bubble bl" align=left valign=bottom><div class="SPRITE_corner_bl" /></td>
+  <td class="bubble br" align=right valign=bottom><div class="SPRITE_corner_br" /></td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+  <tr>
+  <td align="right"
+              valign="middle" width="100%">
+<form action='/accounts/NewAccount?service=mail&amp;continue=http%3A%2F%2Fmail.google.com%2Fmail%2Fe-11-118010843fe120e8aa36462742be8d4a-f1d33458115e7b82ed18c2a698e2908b29ee4508&amp;type=2' id="gaia_langform" method="POST">
+  <noscript></input>
+  </noscript>
+</form>
+  </td>
+  </tr>
+  </table>
+  </td>
+  </tr>
+</table>
+  <div class="body">
+  <h3>
+  &#21019;&#24314;&#24080;&#25143;
+</h3>
+<table width="1199">
+  <tr>
+  <td align="center">
+  <table cellpadding="2" bgcolor="white" cellspacing="0" border="0" width="1%">
+  <tr><td>
+  <table bgcolor="#cbdced" border="0" cellpadding="2" cellspacing="0"
+           width="1%">
+  <tr><td align="left">
+  <table bgcolor="#eeeeee" border="0" cellpadding="2"
+                cellspacing="0" width="100%">
+  <tr><td bgcolor="#ffffff" valign="top"  align="center">
+  <table cellspacing="0" cellpadding="5" width="100%" 
+                  bgcolor="#ffffff" border="0">
+  <tr>
+  <td colspan="2" valign="top">
+  <span class="gaia ops gsl">
+  &#24320;&#22987;&#27880;&#20876;<br/>
+  </span>  </td>
+  </tr>
+  
+   <form name="registerForm" method="post" action="registerservlet">
+  <span class="gaia cca al">
+ <TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#23398;&#21495;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="sno" />
+					</TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#22995;&#21517;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="sname" />
+					</TD>
+			</TR>
+			<TR>
+			    <TD align="right" valign="middle" width="25%" height="10%">&#23494;&#30721;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="password" name="password" />
+					</TD>	
+		    </TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#30830;&#35748;&#23494;&#30721;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="password" name="password2" />
+					</TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#24615;&#21035;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+					<input type="radio" name="ssex1" value="V1" checked=""/>&#30007;
+				    <input type="radio" name="ssex" value="V1" checked/>&#22899;
+			    </TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#24180;&#32423;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="sgrade" />
+					</TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#23398;&#38498;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="dno" />
+					</TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#26381;&#21153;&#26102;&#38388;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="vtime" />
+					</TD>	
+			</TR>
+			<TR>
+				<TD align="right" valign="middle" width="25%" height="10%">&#26435;&#38480;:</TD>
+				<TD align="left" valign="middle" width="75%" height="10%">
+						<INPUT type="text" name="permission" />
+					</TD>	
+			</TR>
+  <!-- Tos.naui=default -->
+  <tr>
+  <td valign="top" nowrap="nowrap">
+  <font size="-1" face="Arial, sans-serif">
+  <b>&#26381;&#21153;&#26465;&#27454;&#65306;</b>  </font>  </td>
+  <td valign="top">
+  <font size="-1" face="Arial, sans-serif">
+  &#35831;&#26597;&#30475;&#24744;&#22312;&#19978;&#38754;&#36755;&#20837;&#30340; &#24535;&#24895;&#32773; &#24080;&#25143;&#20449;&#24687;&#65288;&#27492;&#26102;&#36824;&#21487;&#36827;&#34892;&#36866;&#24403;&#30340;&#26356;&#25913;&#65289;&#65292;&#24182;&#38405;&#35835;&#19979;&#38754;&#30340;&#26381;&#21153;&#26465;&#27454;&#12290;  </font>  </td>
+  </tr>
+  <tr>
+  <td>¡¡</td>
+  <td valign="top">
+  <div>
+  <div style="display:inline" id='tos_div'>
+<table border="0" cellpadding="0" cellspacing="0">
+<tr><td align="right" valign="top">
+  <font size="-1">
+  <a href='TOS?loc=CN&amp;hl=zh' target="_blank">&#21487;&#25171;&#21360;&#29256;&#26412;</a>  </font>
+</td></tr>
+<tr><td>
+  <textarea rows="5" cols="80" style="width:100%;text-align:" readonly="readonly" onFocus="this.rows=10" name="S1">&#65279;&#24535;&#24895;&#32773;&#26381;&#21153;&#26465;&#27454; &#24535;&#24895;&#26381;&#21153;&#26102;&#38388;&#31649;&#29702;&#31995;&#32479;&#27426;&#36814;&#24744;&#65281;
+
+&#21457;&#25196;&#24535;&#24895;&#32773;?#20114;&#21161;&#12289;&#21451;&#29233;&#12289;&#22857;&#29486;&#12289;&#36827;&#27493;?#30340;&#31934;&#31070;&#65292;&#19981;&#26029;&#23601;&#23436;&#21892;&#33258;&#25105;&#65292;&#26381;&#21153;&#20182;&#20154;&#12290;&#19981;&#20570;&#20219;&#20309;&#36829;&#32972;&#24535;&#24895;&#32773;&#36947;&#24503;&#30340;&#20107;&#24773;&#12290;
+
+
+
+
+</textarea>
+</td></tr>
+<tr><td>¡¡</td></tr>
+<tr><td>
+  <font size="-1">
+  &#28857;&#20987;&#19979;&#38754;&#30340;?#25105;&#25509;&#21463;?#65292;&#21363;&#34920;&#31034;&#24744;&#21516;&#24847;&#25509;&#21463;&#19978;&#38754;&#30340;<a href='TOS?loc=CN&amp;hl=zh' target="_blank">&#26381;&#21153;&#26465;&#27454;</a>&#20197;&#21450;<a href='http://mail.google.com/mail/help/intl/zh-CN/program_policies.html' target="_blank">&#35745;&#21010;&#25919;&#31574;</a>&#21644;<a href='http://www.google.com/intl/zh-CN/privacy.html' target="_blank">&#38544;&#31169;&#25919;&#31574;</a>&#12290;  </font>
+</td></tr>
+</table>
+  </div>
+  </div>  </td>
+  </tr>
+<script src="XmlHttp.js" type="text/javascript" ></script>
+<script type="text/javascript" src='TimeZones.js'></script>
+<script type="text/javascript"><!--
+
+
+function onLocChange() {
+  
+  reloadTos();
+  
+  
+  reloadTimeZones();
+}
+
+function reloadTos() {
+
+  var xmlhttp = initXmlHttp();
+
+   
+  if (xmlhttp != null) {
+    var buttonKey = "change_location";
+    var button = getFieldFromForm("createaccount", buttonKey);
+    if (button != null) {
+      button.style.display = "none";
+    }
+  } else {
+    return;
+  }
+
+  var ccKey = "loc";
+  var ccField = getFieldFromForm("createaccount", ccKey);
+
+  
+  if ((ccField != null) &&
+      (document.forms["gaia_langform"] != null) &&
+      (document.forms["gaia_langform"].elements[ccKey] != null)) {
+      document.forms["gaia_langform"].elements[ccKey].value = ccField.value;
+  }
+
+  var hlKey = "hl";
+  var hlField = getFieldFromForm("gaia_langform", hlKey);
+
+  var p1Key = "program_policy_url";
+  var p1Field = getFieldFromForm("createaccount", p1Key);
+
+  var p2Key = "privacy_policy_url";
+  var p2Field = getFieldFromForm("createaccount", p2Key);
+
+  var url = "SelectTos?";
+  if (ccField != null) {
+    url += "&" + ccKey + "=" + ccField.value;
+  }
+  if (hlField != null) {
+    url += "&" + hlKey + "=" + hlField.value;
+  }  
+  if (p1Field != null) {
+    url += "&" + p1Key + "=" + p1Field.value;
+  }
+  if (p2Field != null) {
+    url += "&" + p2Key + "=" + p2Field.value;
+  }  
+
+  
+  var tosDivKey = "tos_div";
+  var tosDiv = document.getElementById(tosDivKey);
+
+  xmlhttp.open("GET", url, true);
+  
+  xmlhttp.onreadystatechange = function() {
+    if (xmlhttp.readyState == 4) {
+      if (tosDiv != null) {
+        tosDiv.innerHTML = xmlhttp.responseText;
+      }
+    }
+  }
+  
+  xmlhttp.send(null);
+
+  
+  
+    var xmlhttp2 = initXmlHttp();
+    
+    var continueKey = "continue";
+    var continueVal = "http:\x2F\x2Fmail.google.com\x2Fmail\x2Fe-11-118010843fe120e8aa36462742be8d4a-f1d33458115e7b82ed18c2a698e2908b29ee4508";
+    var uiTypeKey = "type";
+    var uiTypeVal = "2";
+    var gdKey = "gd";
+    var gdVal = "";
+  
+    var url2 = "SelectMailDomain?service=mail";
+    if (ccField != null) {
+      url2 += "&" + ccKey + "=" + ccField.value;
+    }
+    if (hlField != null) {
+      url2 += "&" + hlKey + "=" + hlField.value;
+    }
+    if (continueVal != "") {
+      url2 += "&" + continueKey + "=" + continueVal;
+    }
+    if (uiTypeVal != "") {
+      url2 += "&" + uiTypeKey + "=" + uiTypeVal;
+    }
+    if (gdVal != "") {
+      url2 += "&" + gdKey + "=" + gdVal;
+    }
+
+    var logoCell = document.getElementById("logo_cell");
+    var titleCell = document.getElementById("title_cell");
+    var descCell = document.getElementById("desc_cell");
+    var getStartCell = document.getElementById("get_start_cell");
+    var domainCell = document.getElementById("domain_cell");
+    xmlhttp2.open("GET", url2, true);
+    xmlhttp2.onreadystatechange = function() {
+      if (xmlhttp2.readyState == 4) {
+        var lines = xmlhttp2.responseText.split("\n");
+        
+        if (lines.length != 6) {
+          
+          return;
+        }
+        if (logoCell != null) {
+          logoCell.innerHTML = lines[0];
+        }
+        if (titleCell != null) {
+          titleCell.innerHTML = lines[1];
+        }
+        if (descCell != null) {
+          descCell.innerHTML = lines[2];
+        }
+        if (getStartCell != null) {
+          getStartCell.innerHTML = lines[3];
+        }
+        if (domainCell != null) {
+          domainCell.innerHTML = lines[4];
+        }
+      }
+    }
+    xmlhttp2.send(null);
+  
+}
+
+
+//--></script>
+  <tr>
+  <td colspan="1">&nbsp;  </td>
+  <td colspan="1" align="center">
+  <input style="width:21em"
+                     id="submitbutton" 
+                     name="submitbutton" type="SUBMIT" 
+                     value='&#25105;&#25509;&#21463;&#65307;&#21019;&#24314;&#25105;&#30340;&#24080;&#25143;&#12290;' />  </td>
+  </tr>
+<div id="cookieWarning1" align="left"></div>
+<tr><td></td>
+  <td><div id="cookieWarning2"></div></td>
+</tr>
+<script type="text/javascript"><!--
+var msg = "";
+
+  document.cookie = "X=abc";
+  var cookieWarning1 = document.getElementById("cookieWarning1");
+  var cookieWarning2 = document.getElementById("cookieWarning2");
+
+  if (document.cookie.indexOf("X=abc") == -1) { 
+    cookieWarning1.innerHTML = "<font color=\"red\" size=\"-1\">" + msg + "</font>";
+  cookieWarning2.innerHTML = "<font color=\"red\" size=\"-1\">" + msg + "</font>";
+  } else {
+  cookieWarning1.innerHTML = "&nbsp;";
+  cookieWarning2.innerHTML = "&nbsp;";
+  }
+//--></script>
+  </table>
+  </td></tr>
+  </table>
+  </td>
+  </tr>
+  </table>
+  </td></tr>
+  </table>
+  </td>
+  </tr>
+</table>
+<br/>
+  <script type="text/javascript"><!-- 
+    function onPreCreateAccountSubmit() {
+      doKtSubmit();
+      
+      if (document.getElementById('homepageSet') != null &&
+        document.getElementById('homepageSet').checked) {
+        var hp = document.getElementById("hp");
+        if (hp != null) {
+          hp.setHomePage("http:\x2F\x2Fwww.google.cn");
+          var isHp;
+          try {
+            isHp=hp.isHomePage("http:\x2F\x2Fwww.google.cn");
+          } catch(z){isHp=0;}
+          if (isHp && document.getElementById('homepageSetSuccess') != null) {
+            document.getElementById('homepageSetSuccess').value = '1';
+          }
+        }
+      }
+      
+      return onPreCreateAccount();
+    }
+  --></script>
+  <form id="createaccount" name="createaccount" action="registerservlet" type=2'
+             method="post" onSubmit="return(onPreCreateAccountSubmit());">
+  <input type="hidden" 
+         id='served_tos_language'
+         name='served_tos_language'
+         value='zh' />
+  <input type="hidden" 
+         id='served_tos_location'
+         name='served_tos_location'
+         value='CN' />
+  <input type="hidden" 
+         id='requested_tos_language'
+         name='requested_tos_language'
+         value='zh' />
+<input type="hidden" 
+       id='privacy_policy_url'
+       name='privacy_policy_url'
+       value='http://www.google.com/intl/zh-CN/privacy.html' />
+  <input type="hidden" 
+         id='program_policy_url'
+         name='program_policy_url'
+         value='http://mail.google.com/mail/help/intl/zh-CN/program_policies.html' />
+  <input type="hidden" name="type" id="type"
+           value="2" />
+  <input type="hidden" name="dsh" id="dsh"
+           value="-4264117495789538126" />
+  <input type="hidden"
+         name="ktl"
+         id="ktl"
+         value="">
+  <input type="hidden"
+         name="ktf"
+         id="ktf"
+         value="">
+  </form>
+<script src="https://ssl.google-analytics.com/urchin_beta.js"         
+        type="text/javascript">
+</script>
+<script type="text/javascript"><!--
+  _uacct="UA-992684-1";
+  _utcp="/accounts/";
+  _udn="google.com";
+  _uRno[0]=".google.com";
+  _uanchor="1";
+  urchinTracker("accounts/NewAccount");
+  
+
+  
+
+  function uclick(targetUrl) {
+    try {
+      urchinTracker(targetUrl);
+    } catch (e) {}
+  }
+  
+  try {
+    if (document.getElementById) {
+      var e = document.getElementById('submitbutton');
+      if (e) {
+        e.onclick = function() {
+          uclick('/accounts/SignupComplete');
+        };
+      }
+    }
+
+    if (document.getElementsByName) {
+      var links = document.getElementsByName('externalAnalyticsLink');
+      for (var i = links.length - 1; i >= 0; i -= 1) {
+  var linkUrl = links[i].href;
+  links[i].onclick = function() {
+  uclick(linkUrl);
+  }
+  }
+  }
+  } catch (e) {}
+--></script>
+  </div>
+  <table width=95% align=center cellpadding=3 cellspacing=0 bgcolor=#C3D9FF style=margin-bottom:5>
+  <tr>
+  <td class="bubble tl" align=left valign=top><div class="SPRITE_corner_tl" /></td>
+  <td class=bubble rowspan=2 style=text-align:left>
+  <div align=center>
+  <font size=-1 color=#666666>?009
+	<a href=http://mail.google.com/mail/help/intl/zh-CN/privacy.html>
+  &#38544;&#31169;&#25919;&#31574;</a> -
+  <a href=http://mail.google.com/mail/help/intl/zh-CN/program_policies.html>
+  &#35745;&#21010;&#25919;&#31574;</a> -
+  <a  href=http://www.google.com/accounts/TOS?loc=CN&hl=zh-CN>
+  &#20351;&#29992;&#26465;&#27454; </a>
+  </font>
+  </div>
+  </td>
+  <td class="bubble tr" align=right valign=top><div class="SPRITE_corner_tr" /></td>
+  </tr>
+  <tr>
+  <td class="bubble bl" align=left valign=bottom><div class="SPRITE_corner_bl" /></td>
+  <td class="bubble br" align=right valign=bottom><div class="SPRITE_corner_br" /></td>
+  </tr>
+</table>
+<script>
+if(typeof(urchinTracker)!='function')document.write('<sc'+'ript src="'+
+'http'+(document.location.protocol=='https:'?'s://ssl':'://www')+
+'.google-analytics.com/urchin.js'+'"></sc'+'ript>')
+</script>
+<script type="text/javascript">
+  _uacct="UA-992684-1";
+  _utcp="/accounts/";
+  _udn="google.com";
+  _uRno[0]=".google.com";
+  _uanchor="1";
+  urchinTracker("accounts/" + "NewAccount");
+  urchinPathCopy("/" + "/mail/help/" + "/");
+</script>
+  </body>
+</html>
